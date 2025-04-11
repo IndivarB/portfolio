@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Bolisetty Indivar</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
+
+    <!-- External Scripts and Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3498db',
+                        secondary: '#2980b9',
+                        accent: '#f72585',
+                        darkBg: '#121212',
+                        darkCard: '#1e1e1e',
+                        darkText: '#f8f9fa',
+                        darkLightText: '#adb5bd',
+                        lightBg: '#f8f9fa',
+                        lightCard: '#ffffff',
+                        lightText: '#2c3e50',
+                        lightLightText: '#495057'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    animation: {
+                        'rotate-slow': 'spin 8s linear infinite',
+                        'pulse-gentle': 'pulse 3s ease-in-out infinite',
+                        'bounce-gentle': 'bounce 2s ease-in-out infinite',
+                        'fade-up': 'fadeUp 0.5s ease-in-out',
+                        'slide-right': 'slideRight 0.7s ease-out'
+                    },
+                    keyframes: {
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideRight: {
+                            '0%': { opacity: '0', transform: 'translateX(-30px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font and Custom Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="font-sans transition-colors duration-300">
+    <!-- Top Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 shadow-lg py-2 px-4 backdrop-blur-md bg-opacity-90 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-5">
+                <img src="images/logo.png" alt="Logo" class="h-12 w-12 object-contain">
+                <a href="#home" class="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    Bolisetty Indivar - Portfolio
+                </a>
+            </div>
+            <button class="theme-toggle p-2 rounded-full hover:bg-accent hover:bg-opacity-20 transition-all duration-300">
+                <i class="theme-icon fas fa-sun text-lg text-primary"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Layout Container -->
+    <div class="flex pt-16 min-h-screen">
+        <!-- Sidebar Navigation (Visible on Medium and Larger Screens) -->
+        <nav class="hidden md:flex flex-col w-64 border-r border-gray-800 p-6 fixed h-full items-center">
+            <div class="space-y-4 mt-20">
+                <a href="#home" class="nav-link active flex items-center p-3 rounded-lg transition-all duration-300">
+                    <i class="fas fa-home mr-3 text-lg"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#about" class="nav-link flex items-center p-3 rounded-lg transition-all duration-300">
+                    <i class="fas fa-user mr-3 text-lg"></i>
+                    <span>About</span>
+                </a>
+                <a href="#education" class="nav-link flex items-center p-3 rounded-lg transition-all duration-300">
+                    <i class="fas fa-graduation-cap mr-3 text-lg"></i>
+                    <span>Education</span>
+                </a>
+                <a href="#projects" class="nav-link flex items-center p-3 rounded-lg transition-all duration-300">
+                    <i class="fas fa-code mr-3 text-lg"></i>
+                    <span>Projects</span>
+                </a>
+                <a href="#resume" class="nav-link flex items-center p-3 rounded-lg transition-all duration-300">
+                    <i class="fas fa-file-alt mr-3 text-lg"></i>
+                    <span>Resume</span>
+                </a>
+                <a href="#certifications" class="nav-link flex items-center p-3 rounded-lg transition-all duration-300">
+                    <i class="fas fa-certificate mr-3 text-lg"></i>
+                    <span>Certifications</span>
+                </a>
+                <a href="#contact" class="nav-link flex items-center p-3 rounded-lg transition-all duration-300">
+                    <i class="fas fa-envelope mr-3 text-lg"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 md:ml-64">
+            <!-- Home Section -->
+            <section id="home" class="min-h-screen flex items-center justify-center px-6 py-20 animate-fade-up">
+                <div class="text-center max-w-4xl">
+                    <div class="relative inline-block mb-8">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-primary to-accent rounded-lg blur opacity-75 animate-pulse-gentle"></div>
+                        <h1 class="text-5xl md:text-7xl font-bold mb-6 relative z-10 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+                            BOLISETTY INDIVAR
+                        </h1>
+                    </div>
+                    <p class="text-xl md:text-2xl text-secondary mb-12 font-medium animate-slide-right">
+                        Crafting AI Innovations for Future Industries!
+                    </p>
+                    <div class="animate-bounce-gentle">
+                        <div class="w-8 h-8 border-r-4 border-b-4 border-primary transform rotate-45 mx-auto"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="py-20 px-6">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-primary border-b-4 border-accent pb-2 inline-block animate-fade-up">
+                        About Me
+                    </h2>
+                    <div class="flex flex-col md:flex-row gap-10 items-center">
+                        <div class="w-full md:w-1/3 flex justify-center animate-slide-right">
+                            <div class="relative group">
+                                <img src="images/profile.jpg" alt="Profile" class="profile-oval w-64 h-80 object-cover border-4 border-accent shadow-lg group-hover:border-primary transition-all duration-500">
+                                <div class="absolute inset-0 profile-oval border-4 border-transparent animate-rotate-slow pointer-events-none"></div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-2/3 animate-fade-up">
+                            <div class="p-6 rounded-lg shadow-lg border-l-4 border-primary mb-8">
+                                <p class="text-lg">
+                                    Hi there! I'm Bolisetty Naga Venkata Indivar, a B.Tech student exploring Artificial Intelligence & Intelligent Process Automation within Computer Science and Engineering.
+                                </p>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="p-6 rounded-lg shadow-md border-l-4 border-accent transition-all hover:-translate-y-1 hover:shadow-xl">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-birthday-cake text-primary mr-3 text-xl"></i>
+                                        <div>
+                                            <h3><b>Birthday</b></h3>
+                                            <p>06/11/2004</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-6 rounded-lg shadow-md border-l-4 border-accent transition-all hover:-translate-y-1 hover:shadow-xl animate-slide-right">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-phone text-primary mr-3 text-xl"></i>
+                                        <div>
+                                            <h3><b>Phone</b></h3>
+                                            <p>+91 9666761699</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-6 rounded-lg shadow-md border-l-4 border-accent transition-all hover:-translate-y-1 hover:shadow-xl animate-slide-right">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-city text-primary mr-3 text-xl"></i>
+                                        <div>
+                                            <h3><b>Location</b></h3>
+                                            <p>Repalle, Andhra Pradesh, India</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-6 rounded-lg shadow-md border-l-4 border-accent transition-all hover:-translate-y-1 hover:shadow-xl animate-slide-right">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-university text-primary mr-3 text-xl"></i>
+                                        <div>
+                                            <h3><b>College</b></h3>
+                                            <p>KL University</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-6 rounded-lg shadow-md border-l-4 border-accent transition-all hover:-translate-y-1 hover:shadow-xl animate-slide-right">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-calendar-alt text-primary mr-3 text-xl"></i>
+                                        <div>
+                                            <h3><b>Age</b></h3>
+                                            <p>20</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-6 rounded-lg shadow-md border-l-4 border-accent transition-all hover:-translate-y-1 hover:shadow-xl animate-slide-right">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-school text-primary mr-3 text-xl"></i>
+                                        <div>
+                                            <h3><b>School</b></h3>
+                                            <p>Viswabharathi Wisewoods (CBSE)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-6 rounded-lg shadow-md border-l-4 border-accent transition-all hover:-translate-y-1 hover:shadow-xl animate-slide-right">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-book text-primary mr-3 text-xl"></i>
+                                        <div>
+                                            <h3><b>Intermediate</b></h3>
+                                            <p>Viswabharathi Wisewoods (CBSE)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-6 rounded-lg shadow-md border-l-4 border-accent transition-all hover:-translate-y-1 hover:shadow-xl animate-slide-right">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-graduation-cap text-primary mr-3 text-xl"></i>
+                                        <div>
+                                            <h3><b>Degree</b></h3>
+                                            <p>B.Tech</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-6 rounded-lg shadow-md border-l-4 border-accent transition-all hover:-translate-y-1 hover:shadow-xl animate-slide-right">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-code-branch text-primary mr-3 text-xl"></i>
+                                        <div>
+                                            <h3><b>Branch</b></h3>
+                                            <p>CSE (AI&IPA)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-6 rounded-lg shadow-md border-l-4 border-accent transition-all hover:-translate-y-1 hover:shadow-xl animate-slide-right">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-envelope text-primary mr-3 text-xl"></i>
+                                        <div>
+                                            <h3><b>Email</b></h3>
+                                            <p>indivar.bolisetty999@gmail.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="py-20 px-6 animate-fade-up">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-primary border-b-4 border-accent pb-2 inline-block">
+                        Education
+                    </h2>
+                    <div class="relative">
+                        <div class="border-l-4 border-primary pl-8 space-y-12">
+                            <div class="relative animate-slide-right">
+                                <div class="absolute -left-11 top-0 w-6 h-6 rounded-full bg-primary border-4"></div>
+                                <div class="p-6 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                                    <h3 class="text-xl font-bold text-primary">B.Tech</h3>
+                                    <p class="text-darkLightText dark:text-lightLightText">CSE (AI&IPA)</p>
+                                    <p class="font-medium">KL University</p>
+                                    <p class="text-darkLightText dark:text-lightLightText">2022 - 2026</p>
+                                    <p class="text-accent">CGPA: 9.00/10.00</p>
+                                </div>
+                            </div>
+                            <div class="relative animate-slide-right">
+                                <div class="absolute -left-11 top-0 w-6 h-6 rounded-full bg-primary border-4"></div>
+                                <div class="p-6 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                                    <h3 class="text-xl font-bold text-primary">Intermediate</h3>
+                                    <p class="text-darkLightText dark:text-lightLightText">CBSE</p>
+                                    <p class="font-medium">Viswabharathi Wisewoods</p>
+                                    <p class="text-darkLightText dark:text-lightLightText">2020 - 2022</p>
+                                    <p class="text-accent">Percentage: 76%</p>
+                                </div>
+                            </div>
+                            <div class="relative animate-slide-right">
+                                <div class="absolute -left-11 top-0 w-6 h-6 rounded-full bg-primary border-4"></div>
+                                <div class="p-6 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                                    <h3 class="text-xl font-bold text-primary">High School</h3>
+                                    <p class="text-darkLightText dark:text-lightLightText">CBSE</p>
+                                    <p class="font-medium">Viswabharathi Wisewoods</p>
+                                    <p class="text-darkLightText dark:text-lightLightText">2020</p>
+                                    <p class="text-accent">Percentage: 72%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="py-20 px-6 animate-fade-up">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-primary border-b-4 border-accent pb-2 inline-block">
+                        Projects
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="p-6 rounded-lg shadow-lg border-t-4 border-primary transition-all hover:-translate-y-2 hover:shadow-xl animate-slide-right">
+                            <h3 class="text-2xl font-bold text-primary mb-2">Online Voting Platform</h3>
+                            <p class="text-accent mb-4">Python Full Stack</p>
+                            <p class="mb-6">Created a Django-powered voting system for streamlined and effective election processes.</p>
+                            <a href="pdf/OVS.pdf" class="project-btn inline-flex items-center px-6 py-2 rounded-lg font-medium text-white transition-all hover:px-8" target="_blank">
+                                View Project Report <span class="ml-2">→</span>
+                            </a>
+                        </div>
+                        <div class="p-6 rounded-lg shadow-lg border-t-4 border-primary transition-all hover:-translate-y-2 hover:shadow-xl animate-slide-right">
+                            <h3 class="text-2xl font-bold text-primary mb-2">Job Search Portal</h3>
+                            <p class="text-accent mb-4">MERN Stack</p>
+                            <p class="mb-6">Developed a React-driven job platform using MongoDB, Express, and Node.js for seamless user interaction.</p>
+                            <a href="pdf/OJP.pdf" class="project-btn inline-flex items-center px-6 py-2 rounded-lg font-medium text-white transition-all hover:px-8" target="_blank">
+                                View Project Report <span class="ml-2">→</span>
+                            </a>
+                        </div>
+                        <div class="p-6 rounded-lg shadow-lg border-t-4 border-primary transition-all hover:-translate-y-2 hover:shadow-xl animate-slide-right">
+                            <h3 class="text-2xl font-bold text-primary mb-2">Timetable Creator</h3>
+                            <p class="text-accent mb-4">Java Enterprise</p>
+                            <p class="mb-6">Built a Java and MySQL-based tool for efficient, error-free timetable creation and management.</p>
+                            <a href="pdf/TTG.pdf" class="project-btn inline-flex items-center px-6 py-2 rounded-lg font-medium text-white transition-all hover:px-8" target="_blank">
+                                View Project Report <span class="ml-2">→</span>
+                            </a>
+                        </div>
+                        <div class="p-6 rounded-lg shadow-lg border-t-4 border-primary transition-all hover:-translate-y-2 hover:shadow-xl animate-slide-right">
+                            <h3 class="text-2xl font-bold text-primary mb-2">Constitution Awareness Site</h3>
+                            <p class="text-accent mb-4">Java Full Stack</p>
+                            <p class="mb-6">Designed a Spring Boot website to promote education on the Indian Constitution.</p>
+                            <a href="pdf/CAS.pdf" class="project-btn inline-flex items-center px-6 py-2 rounded-lg font-medium text-white transition-all hover:px-8" target="_blank">
+                                View Project Report <span class="ml-2">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resume Section -->
+            <section id="resume" class="py-20 px-6 animate-fade-up">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-primary border-b-4 border-accent pb-2 inline-block">
+                        Resume
+                    </h2>
+                    <div class="p-8 rounded-lg shadow-lg text-center max-w-3xl mx-auto animate-slide-right">
+                        <p class="text-lg mb-8">
+                            I’m a dedicated CSE student focusing on AI and automation, equipped with robust technical skills and a passion for solving real-world problems through innovative projects.
+                        </p>
+                        <a href="pdf/CV.pdf" class="inline-flex items-center px-8 py-3 bg-gradient-to-r from-primary to-accent text-darkBg rounded-lg font-bold hover:opacity-90 transition-all" target="_blank">
+                            <i class="fas fa-download mr-2"></i>
+                            Get Resume
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certifications Section -->
+            <section id="certifications" class="py-20 px-6 animate-fade-up">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-primary border-b-4 border-accent pb-2 inline-block">
+                        Certifications
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <div class="p-6 rounded-lg shadow-lg flex items-start gap-6 transition-all hover:-translate-y-2 hover:shadow-xl animate-slide-right">
+                            <div class="bg-gradient-to-br from-blue-500 to-blue-700 p-4 rounded-full text-white">
+                                <i class="fab fa-aws text-3xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-primary">AWS Cloud Practitioner</h3>
+                                <p class="text-darkLightText dark:text-lightLightText mb-2">Amazon Web Services</p>
+                                <a href="pdf/AWS Cloud Practitioner.pdf" class="text-accent hover:underline inline-flex items-center" target="_blank">
+                                    View Certificate <i class="fas fa-external-link-alt ml-1 text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="p-6 rounded-lg shadow-lg flex items-start gap-6 transition-all hover:-translate-y-2 hover:shadow-xl animate-slide-right">
+                            <div class="bg-gradient-to-br from-blue-400 to-blue-600 p-4 rounded-full text-white">
+                                <i class="fas fa-robot text-3xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-primary">Salesforce AI Associate</h3>
+                                <p class="text-darkLightText dark:text-lightLightText mb-2">Salesforce</p>
+                                <a href="pdf/Salesforce AI Associate.pdf" class="text-accent hover:underline inline-flex items-center" target="_blank">
+                                    View Certificate <i class="fas fa-external-link-alt ml-1 text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="py-20 px-6 animate-fade-up">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-primary border-b-4 border-accent pb-2 inline-block">
+                        Let's Connect
+                    </h2>
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <a href="https://www.linkedin.com/in/bolisetty-indivar-43ba5628a/" target="_blank" class="contact-btn bg-blue-600 hover:bg-blue-700 animate-slide-right">
+                            <i class="fab fa-linkedin-in text-3xl"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/IndivarB" target="_blank" class="contact-btn bg-gray-800 hover:bg-gray-900 animate-slide-right">
+                            <i class="fab fa-github text-3xl"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="mailto:indivar.bolisetty999@gmail.com" class="contact-btn bg-red-500 hover:bg-red-600 animate-slide-right">
+                            <i class="fas fa-envelope text-3xl"></i>
+                            <span>Email</span>
+                        </a>
+                        <a href="https://www.instagram.com/iam_indivar/" target="_blank" class="contact-btn bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 animate-slide-right">
+                            <i class="fab fa-instagram text-3xl"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-darkBg dark:bg-darkCard py-6 px-6 border-t border-gray-800">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center text-darkLightText dark:text-lightLightText">
+            <p class="text-center md:text-left mb-4 md:mb-0">
+                © 2025 Bolisetty Indivar. All rights reserved.
+            </p>
+            <div class="flex gap-6">
+                <a href="https://www.linkedin.com/in/bolisetty-indivar-43ba5628a/" target="_blank" class="hover:text-primary transition-colors">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a href="https://github.com/IndivarB" target="_blank" class="hover:text-primary transition-colors">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="mailto:indivar.bolisetty999@gmail.com" class="hover:text-primary transition-colors">
+                    <i class="fas fa-envelope text-xl"></i>
+                </a>
+                <a href="https://www.instagram.com/iam_indivar/" target="_blank" class="hover:text-primary transition-colors">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

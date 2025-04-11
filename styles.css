@@ -1,0 +1,116 @@
+/* Navigation Link Active State */
+.nav-link.active {
+    background: linear-gradient(to right, #4cc9f0, #f72585);
+    color: #ffffff;
+}
+
+/* Social Contact Buttons */
+.contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Glow Animation */
+@keyframes glow {
+    0% { box-shadow: 0 0 5px #4cc9f0; }
+    50% { box-shadow: 0 0 20px #4cc9f0; }
+    100% { box-shadow: 0 0 5px #4cc9f0; }
+}
+
+.glow-effect {
+    animation: glow 2s infinite;
+}
+
+/* Smooth Transitions */
+section, body, nav {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme Styles */
+[data-theme="dark"] body {
+    background-color: #121212;
+    color: #f8f9fa;
+}
+
+[data-theme="dark"] nav,
+[data-theme="dark"] #education,
+[data-theme="dark"] #resume,
+[data-theme="dark"] #contact {
+    background-color: #1e1e1e;
+}
+
+[data-theme="dark"] section#home {
+    background: linear-gradient(to bottom right, #121212, #1f2937);
+}
+
+[data-theme="dark"] .p-6.rounded-lg.shadow-lg:not(.bg-gradient-to-br) {
+    background-color: #1e1e1e;
+}
+
+[data-theme="light"] body {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+[data-theme="light"] nav,
+[data-theme="light"] #education,
+[data-theme="light"] #resume,
+[data-theme="light"] #contact {
+    background-color: #ffffff;
+}
+
+[data-theme="light"] section#home {
+    background: linear-gradient(to bottom right, #f8f9fa, #e5e7eb);
+}
+
+[data-theme="light"] .p-6.rounded-lg.shadow-lg:not(.bg-gradient-to-br) {
+    background-color: #ffffff;
+}
+
+/* Project Button with Nav-like Gradient */
+.project-btn {
+    background: linear-gradient(to right, #4cc9f0, #f72585);
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.project-btn:hover {
+    background: linear-gradient(to right, #3bb8e0, #e01475);
+    padding-left: 2rem; /* Matches hover:px-8 in Tailwind */
+    padding-right: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Keep the existing .nav-link.active style */
+.nav-link.active {
+    background: linear-gradient(to right, #4cc9f0, #f72585);
+    color: #ffffff;
+}
+
+/* Oval shape for profile image and rotating border */
+.profile-oval {
+    border-radius: 50% / 70%; /* 50% horizontal, 70% vertical for an oval shape */
+}
+
+/* Navigation Logo Styles */
+nav img {
+    width: 10px;
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+
+nav img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
