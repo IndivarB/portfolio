@@ -1,10 +1,21 @@
-/* Navigation Link Active State */
+/* Navigation Styles */
+/* Active Navigation Link */
 .nav-link.active {
     background: linear-gradient(to right, #4cc9f0, #f72585);
     color: #ffffff;
 }
 
-/* Social Contact Buttons */
+/* Navigation Logo */
+nav img {
+    transition: transform 0.3s ease;
+}
+
+nav img:hover {
+    transform: scale(1.1);
+}
+
+/* Button Styles */
+/* Contact Buttons */
 .contact-btn {
     display: flex;
     align-items: center;
@@ -22,6 +33,25 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Project Buttons */
+.project-btn {
+    background: linear-gradient(to right, #3498db, #f72585);
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.project-btn:hover {
+    background: linear-gradient(to right, #3bb8e0, #e01475);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.overview-btn {
+    background: linear-gradient(to right, #2980b9, #3498db);
+}
+
+/* Animation Styles */
 /* Glow Animation */
 @keyframes glow {
     0% { box-shadow: 0 0 5px #4cc9f0; }
@@ -79,38 +109,106 @@ section, body, nav {
     background-color: #ffffff;
 }
 
-/* Project Button with Nav-like Gradient */
-.project-btn {
-    background: linear-gradient(to right, #4cc9f0, #f72585);
-    color: #ffffff;
-    transition: all 0.3s ease;
+/* Modal Styles */
+/* Modal Container */
+#project-modal {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.project-btn:hover {
-    background: linear-gradient(to right, #3bb8e0, #e01475);
-    padding-left: 2rem; /* Matches hover:px-8 in Tailwind */
-    padding-right: 2rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+#project-modal.show {
+    display: block;
+    opacity: 1;
 }
 
-/* Keep the existing .nav-link.active style */
-.nav-link.active {
-    background: linear-gradient(to right, #4cc9f0, #f72585);
-    color: #ffffff;
+/* Hide Navbars When Modal is Open */
+#project-modal.show ~ nav#top-nav,
+#project-modal.show ~ div nav#side-nav {
+    display: none;
 }
 
-/* Oval shape for profile image and rotating border */
+/* Modal Content */
+#modal-content {
+    animation: fadeUp 0.5s ease-in-out;
+}
+
+#modal-content h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+#modal-content p {
+    font-size: 1.125rem;
+    color: #adb5bd;
+    margin-bottom: 1.5rem;
+}
+
+#modal-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: #adb5bd;
+}
+
+#modal-content ul li {
+    margin-bottom: 0.75rem;
+}
+
+#close-modal {
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 60;
+}
+
+/* Theme-Specific Modal Colors */
+.dark #modal-content p,
+.dark #modal-content ul li {
+    color: #f8f9fa;
+}
+
+.light #modal-content p,
+.light #modal-content ul li {
+    color: #2c3e50;
+}
+
+/* Prevent Body Scrolling */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Full Viewport Modal */
+#project-modal.show {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+/* Profile Image Styles */
 .profile-oval {
-    border-radius: 50% / 70%; /* 50% horizontal, 70% vertical for an oval shape */
+    border-radius: 50% / 70%;
 }
 
-/* Navigation Logo Styles */
-nav img {
-    width: 10px;
-    height: 100px;
-    transition: transform 0.3s ease;
+/* Custom Cursor Styles */
+.custom-cursor {
+    position: fixed;
+    width: 32px; /* Adjust based on downloaded cursor size */
+    height: 32px; /* Adjust based on downloaded cursor size */
+    pointer-events: none;
+    z-index: 9999;
+    background: url('images/cursor.png') no-repeat center; /* Replace with your downloaded cursor path */
+    background-size: contain;
+    transform: translate(-50%, -50%);
 }
 
-nav img:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
+/* Hide default cursor */
+body {
+    cursor: none;
+}
+
+/* Restore standard cursor for interactive elements */
+a, button, .nav-link, #close-modal, .project-btn, .overview-btn, .theme-toggle, .contact-btn {
+    cursor: pointer;
 }
