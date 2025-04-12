@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
+<!-- Head Section -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Bolisetty Indivar</title>
-    <link rel="shortcut icon" type="image/x-icon" href="images/logo.png" />
-
-    <!-- External Scripts and Styles -->
+    <title>Bolisetty Indivar | Portfolio</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Tailwind Configuration -->
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -53,20 +51,24 @@
             }
         }
     </script>
-
-    <!-- Font and Custom Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
+<!-- Body Section -->
 <body class="font-sans transition-colors duration-300">
+
+    <!-- Custom Cursor -->
+    <div id="custom-cursor" class="custom-cursor"></div>
+
+    <!-- Navigation Section -->
     <!-- Top Navigation Bar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 shadow-lg py-2 px-4 backdrop-blur-md bg-opacity-90 border-b border-gray-800">
+    <nav id="top-nav" class="fixed top-0 left-0 right-0 z-40 shadow-lg py-2 px-4 backdrop-blur-md bg-opacity-90 border-b border-gray-800">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="flex items-center gap-5">
                 <img src="images/logo.png" alt="Logo" class="h-12 w-12 object-contain">
                 <a href="#home" class="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                    Bolisetty Indivar - Portfolio
+                    Bolisetty Indivar
                 </a>
             </div>
             <button class="theme-toggle p-2 rounded-full hover:bg-accent hover:bg-opacity-20 transition-all duration-300">
@@ -75,10 +77,10 @@
         </div>
     </nav>
 
-    <!-- Main Layout Container -->
+    <!-- Main Layout -->
     <div class="flex pt-16 min-h-screen">
-        <!-- Sidebar Navigation (Visible on Medium and Larger Screens) -->
-        <nav class="hidden md:flex flex-col w-64 border-r border-gray-800 p-6 fixed h-full items-center">
+        <!-- Sidebar Navigation -->
+        <nav id="side-nav" class="hidden md:flex flex-col w-64 border-r border-gray-800 p-6 fixed h-full items-center">
             <div class="space-y-4 mt-20">
                 <a href="#home" class="nav-link active flex items-center p-3 rounded-lg transition-all duration-300">
                     <i class="fas fa-home mr-3 text-lg"></i>
@@ -111,8 +113,20 @@
             </div>
         </nav>
 
-        <!-- Main Content Area -->
+        <!-- Main Content -->
         <main class="flex-1 md:ml-64">
+            <!-- Project Modal -->
+            <div id="project-modal" class="fixed inset-0 bg-darkBg dark:bg-darkCard hidden z-50 overflow-y-auto">
+                <div class="min-h-screen flex items-center justify-center p-6">
+                    <button id="close-modal" class="absolute top-4 right-4 text-3xl text-primary hover:text-accent transition-colors">
+                        ×
+                    </button>
+                    <div id="modal-content" class="max-w-4xl w-full p-8 rounded-lg shadow-2xl bg-lightCard dark:bg-darkCard">
+                        <!-- Content injected via JS -->
+                    </div>
+                </div>
+            </div>
+
             <!-- Home Section -->
             <section id="home" class="min-h-screen flex items-center justify-center px-6 py-20 animate-fade-up">
                 <div class="text-center max-w-4xl">
@@ -132,9 +146,9 @@
             </section>
 
             <!-- About Section -->
-            <section id="about" class="py-20 px-6">
+            <section id="about" class="py-20 px-6 animate-fade-up">
                 <div class="max-w-6xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-primary border-b-4 border-accent pb-2 inline-block animate-fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-primary border-b-4 border-accent pb-2 inline-block">
                         About Me
                     </h2>
                     <div class="flex flex-col md:flex-row gap-10 items-center">
@@ -147,7 +161,7 @@
                         <div class="w-full md:w-2/3 animate-fade-up">
                             <div class="p-6 rounded-lg shadow-lg border-l-4 border-primary mb-8">
                                 <p class="text-lg">
-                                    Hi there! I'm Bolisetty Naga Venkata Indivar, a B.Tech student exploring Artificial Intelligence & Intelligent Process Automation within Computer Science and Engineering.
+                                    Hello! I'm Bolisetty Indivar, a B.Tech student passionate about AI and Intelligent Process Automation in Computer Science.
                                 </p>
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -155,7 +169,7 @@
                                     <div class="flex items-center">
                                         <i class="fas fa-birthday-cake text-primary mr-3 text-xl"></i>
                                         <div>
-                                            <h3><b>Birthday</b></h3>
+                                            <h3 class="font-bold">Birthday</h3>
                                             <p>06/11/2004</p>
                                         </div>
                                     </div>
@@ -164,7 +178,7 @@
                                     <div class="flex items-center">
                                         <i class="fas fa-phone text-primary mr-3 text-xl"></i>
                                         <div>
-                                            <h3><b>Phone</b></h3>
+                                            <h3 class="font-bold">Phone</h3>
                                             <p>+91 9666761699</p>
                                         </div>
                                     </div>
@@ -173,7 +187,7 @@
                                     <div class="flex items-center">
                                         <i class="fas fa-city text-primary mr-3 text-xl"></i>
                                         <div>
-                                            <h3><b>Location</b></h3>
+                                            <h3 class="font-bold">Location</h3>
                                             <p>Repalle, Andhra Pradesh, India</p>
                                         </div>
                                     </div>
@@ -182,7 +196,7 @@
                                     <div class="flex items-center">
                                         <i class="fas fa-university text-primary mr-3 text-xl"></i>
                                         <div>
-                                            <h3><b>College</b></h3>
+                                            <h3 class="font-bold">College</h3>
                                             <p>KL University</p>
                                         </div>
                                     </div>
@@ -191,7 +205,7 @@
                                     <div class="flex items-center">
                                         <i class="fas fa-calendar-alt text-primary mr-3 text-xl"></i>
                                         <div>
-                                            <h3><b>Age</b></h3>
+                                            <h3 class="font-bold">Age</h3>
                                             <p>20</p>
                                         </div>
                                     </div>
@@ -200,7 +214,7 @@
                                     <div class="flex items-center">
                                         <i class="fas fa-school text-primary mr-3 text-xl"></i>
                                         <div>
-                                            <h3><b>School</b></h3>
+                                            <h3 class="font-bold">School</h3>
                                             <p>Viswabharathi Wisewoods (CBSE)</p>
                                         </div>
                                     </div>
@@ -209,7 +223,7 @@
                                     <div class="flex items-center">
                                         <i class="fas fa-book text-primary mr-3 text-xl"></i>
                                         <div>
-                                            <h3><b>Intermediate</b></h3>
+                                            <h3 class="font-bold">Intermediate</h3>
                                             <p>Viswabharathi Wisewoods (CBSE)</p>
                                         </div>
                                     </div>
@@ -218,7 +232,7 @@
                                     <div class="flex items-center">
                                         <i class="fas fa-graduation-cap text-primary mr-3 text-xl"></i>
                                         <div>
-                                            <h3><b>Degree</b></h3>
+                                            <h3 class="font-bold">Degree</h3>
                                             <p>B.Tech</p>
                                         </div>
                                     </div>
@@ -227,7 +241,7 @@
                                     <div class="flex items-center">
                                         <i class="fas fa-code-branch text-primary mr-3 text-xl"></i>
                                         <div>
-                                            <h3><b>Branch</b></h3>
+                                            <h3 class="font-bold">Branch</h3>
                                             <p>CSE (AI&IPA)</p>
                                         </div>
                                     </div>
@@ -236,7 +250,7 @@
                                     <div class="flex items-center">
                                         <i class="fas fa-envelope text-primary mr-3 text-xl"></i>
                                         <div>
-                                            <h3><b>Email</b></h3>
+                                            <h3 class="font-bold">Email</h3>
                                             <p>indivar.bolisetty999@gmail.com</p>
                                         </div>
                                     </div>
@@ -300,34 +314,54 @@
                         <div class="p-6 rounded-lg shadow-lg border-t-4 border-primary transition-all hover:-translate-y-2 hover:shadow-xl animate-slide-right">
                             <h3 class="text-2xl font-bold text-primary mb-2">Online Voting Platform</h3>
                             <p class="text-accent mb-4">Python Full Stack</p>
-                            <p class="mb-6">Created a Django-powered voting system for streamlined and effective election processes.</p>
-                            <a href="pdf/OVS.pdf" class="project-btn inline-flex items-center px-6 py-2 rounded-lg font-medium text-white transition-all hover:px-8" target="_blank">
-                                View Project Report <span class="ml-2">→</span>
-                            </a>
+                            <p class="mb-6">A Django-based voting system for efficient elections.</p>
+                            <div class="flex gap-4">
+                                <a href="pdf/OVS.pdf" class="project-btn inline-flex items-center px-6 py-2 rounded-lg font-medium text-white transition-all hover:px-8" target="_blank">
+                                    View Report <span class="ml-2">→</span>
+                                </a>
+                                <button class="overview-btn inline-flex items-center px-6 py-2 rounded-lg font-medium text-white bg-gradient-to-r from-secondary to-primary transition-all hover:px-8" data-project="online-voting">
+                                    Overview <span class="ml-2">→</span>
+                                </button>
+                            </div>
                         </div>
                         <div class="p-6 rounded-lg shadow-lg border-t-4 border-primary transition-all hover:-translate-y-2 hover:shadow-xl animate-slide-right">
                             <h3 class="text-2xl font-bold text-primary mb-2">Job Search Portal</h3>
                             <p class="text-accent mb-4">MERN Stack</p>
-                            <p class="mb-6">Developed a React-driven job platform using MongoDB, Express, and Node.js for seamless user interaction.</p>
-                            <a href="pdf/OJP.pdf" class="project-btn inline-flex items-center px-6 py-2 rounded-lg font-medium text-white transition-all hover:px-8" target="_blank">
-                                View Project Report <span class="ml-2">→</span>
-                            </a>
+                            <p class="mb-6">A React-based job platform with MongoDB backend.</p>
+                            <div class="flex gap-4">
+                                <a href="pdf/OJP.pdf" class="project-btn inline-flex items-center px-6 py-2 rounded-lg font-medium text-white transition-all hover:px-8" target="_blank">
+                                    View Report <span class="ml-2">→</span>
+                                </a>
+                                <button class="overview-btn inline-flex items-center px-6 py-2 rounded-lg font-medium text-white bg-gradient-to-r from-secondary to-primary transition-all hover:px-8" data-project="job-search">
+                                    Overview <span class="ml-2">→</span>
+                                </button>
+                            </div>
                         </div>
                         <div class="p-6 rounded-lg shadow-lg border-t-4 border-primary transition-all hover:-translate-y-2 hover:shadow-xl animate-slide-right">
                             <h3 class="text-2xl font-bold text-primary mb-2">Timetable Creator</h3>
                             <p class="text-accent mb-4">Java Enterprise</p>
-                            <p class="mb-6">Built a Java and MySQL-based tool for efficient, error-free timetable creation and management.</p>
-                            <a href="pdf/TTG.pdf" class="project-btn inline-flex items-center px-6 py-2 rounded-lg font-medium text-white transition-all hover:px-8" target="_blank">
-                                View Project Report <span class="ml-2">→</span>
-                            </a>
+                            <p class="mb-6">A Java tool for conflict-free timetable generation.</p>
+                            <div class="flex gap-4">
+                                <a href="pdf/TTG.pdf" class="project-btn inline-flex items-center px-6 py-2 rounded-lg font-medium text-white transition-all hover:px-8" target="_blank">
+                                    View Report <span class="ml-2">→</span>
+                                </a>
+                                <button class="overview-btn inline-flex items-center px-6 py-2 rounded-lg font-medium text-white bg-gradient-to-r from-secondary to-primary transition-all hover:px-8" data-project="timetable">
+                                    Overview <span class="ml-2">→</span>
+                                </button>
+                            </div>
                         </div>
                         <div class="p-6 rounded-lg shadow-lg border-t-4 border-primary transition-all hover:-translate-y-2 hover:shadow-xl animate-slide-right">
                             <h3 class="text-2xl font-bold text-primary mb-2">Constitution Awareness Site</h3>
                             <p class="text-accent mb-4">Java Full Stack</p>
-                            <p class="mb-6">Designed a Spring Boot website to promote education on the Indian Constitution.</p>
-                            <a href="pdf/CAS.pdf" class="project-btn inline-flex items-center px-6 py-2 rounded-lg font-medium text-white transition-all hover:px-8" target="_blank">
-                                View Project Report <span class="ml-2">→</span>
-                            </a>
+                            <p class="mb-6">A Spring Boot site for constitutional education.</p>
+                            <div class="flex gap-4">
+                                <a href="pdf/CAS.pdf" class="project-btn inline-flex items-center px-6 py-2 rounded-lg font-medium text-white transition-all hover:px-8" target="_blank">
+                                    View Report <span class="ml-2">→</span>
+                                </a>
+                                <button class="overview-btn inline-flex items-center px-6 py-2 rounded-lg font-medium text-white bg-gradient-to-r from-secondary to-primary transition-all hover:px-8" data-project="constitution">
+                                    Overview <span class="ml-2">→</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -341,11 +375,11 @@
                     </h2>
                     <div class="p-8 rounded-lg shadow-lg text-center max-w-3xl mx-auto animate-slide-right">
                         <p class="text-lg mb-8">
-                            I’m a dedicated CSE student focusing on AI and automation, equipped with robust technical skills and a passion for solving real-world problems through innovative projects.
+                            A CSE student specializing in AI, driven by innovation and problem-solving.
                         </p>
                         <a href="pdf/CV.pdf" class="inline-flex items-center px-8 py-3 bg-gradient-to-r from-primary to-accent text-darkBg rounded-lg font-bold hover:opacity-90 transition-all" target="_blank">
                             <i class="fas fa-download mr-2"></i>
-                            Get Resume
+                            Download Resume
                         </a>
                     </div>
                 </div>
@@ -390,7 +424,7 @@
             <section id="contact" class="py-20 px-6 animate-fade-up">
                 <div class="max-w-6xl mx-auto">
                     <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-primary border-b-4 border-accent pb-2 inline-block">
-                        Let's Connect
+                        Connect With Me
                     </h2>
                     <div class="flex flex-wrap justify-center gap-6">
                         <a href="https://www.linkedin.com/in/bolisetty-indivar-43ba5628a/" target="_blank" class="contact-btn bg-blue-600 hover:bg-blue-700 animate-slide-right">
@@ -415,7 +449,7 @@
         </main>
     </div>
 
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer class="bg-darkBg dark:bg-darkCard py-6 px-6 border-t border-gray-800">
         <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center text-darkLightText dark:text-lightLightText">
             <p class="text-center md:text-left mb-4 md:mb-0">
@@ -438,7 +472,7 @@
         </div>
     </footer>
 
-    <!-- External JavaScript -->
+    <!-- Script Section -->
     <script src="script.js"></script>
 </body>
 </html>
